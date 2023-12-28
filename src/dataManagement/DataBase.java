@@ -41,7 +41,6 @@ public class DataBase {
         
         for (String string : credentialsList) {
             credentials = string.split(";");
-            System.out.println(credentials[0]);
             
             //In case there is a blank line
             if(credentials.length > 0){
