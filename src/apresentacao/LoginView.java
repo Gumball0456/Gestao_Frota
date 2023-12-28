@@ -8,6 +8,7 @@ import java.awt.Component;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
@@ -61,4 +62,21 @@ public class LoginView extends View{
         //add button
         addComponent(loginButton, 2, 1, 1, 1);
     }   
+
+    public void addLoginButtonEventListener(ActionListener actionListener) {
+        loginButton.addActionListener(actionListener);
+    }
+
+    public String getUserName() {
+        return username.getText();
+    }
+
+    public String getUserPassword() {
+        char passwordArray[] = password.getPassword();
+        
+        //JPasswordFied returns an array containing the chars in the password
+        String password = new String(passwordArray);
+        
+        return password;
+    }
 }
