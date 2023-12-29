@@ -52,7 +52,7 @@ public class User {
         
     }
     
-    private String getPassword(){
+    public String getPassword(){
         
         return password;
         

@@ -6,6 +6,7 @@ package main;
 
 import Controlers.InicioController;
 import javax.swing.JFrame;
+import login.Login;
 
 /**
  *
@@ -13,10 +14,13 @@ import javax.swing.JFrame;
  */
 public class main{
     public static void main(String args[]){
+        
+       Login log = new Login();
+       log.addUser();
        Inicio frame = new Inicio();
        InicioController frameController= new InicioController(frame);
        
-       
+   
        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        frame.setSize(1000,800);
        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
