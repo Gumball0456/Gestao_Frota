@@ -4,10 +4,11 @@
  */
 package apresentacao;
 
-import java.awt.Insets;
+import java.awt.GridBagConstraints;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -17,6 +18,7 @@ import javax.swing.JTextField;
  */
 public class LoginView extends View{
     //label and input for username
+    JLabel loginError = new JLabel("Hello");
     JLabel usernameL = new JLabel("Usuario");
     JTextField username = new JTextField("", 20);
     
@@ -33,19 +35,12 @@ public class LoginView extends View{
         username.setBorder(null);
         password.setBorder(null);
         
-        //define maring for elements
-        Insets insets = new Insets(10, 5, 10, 5);
-        
         //add Label for username and its unput area
-        addComponent(usernameL, 0, 0, 1, 1, insets);
-        addComponent(username, 0, 1, 1, 1, insets);
-        
-        //add Label for password and its unput area
-        addComponent(passwordL, 1, 0, 1, 1, insets);
-        addComponent(password, 1, 1, 1, 1, insets);
-        
-        //add button
-        addComponent(loginButton, 2, 1, 1, 1, insets);
+        addComponent(usernameL, 1 ,0, 1,1, 0,0, GridBagConstraints.NORTH,GridBagConstraints.NONE,0,0,0,0,5,5);
+        addComponent(username, 1 ,1, 1,1, 0,0, GridBagConstraints.CENTER,GridBagConstraints.NONE,0,0,0,10,5,5);
+        addComponent(passwordL, 2 ,0, 1,1, 0,0, GridBagConstraints.CENTER,GridBagConstraints.NONE,0,5,0,0,5,5);
+        addComponent(password, 2 ,1, 1,1, 0,0, GridBagConstraints.CENTER,GridBagConstraints.NONE,0,0,0,0,5,5);
+        addComponent(loginButton, 3 ,1, 1,1, 0,0, GridBagConstraints.CENTER,GridBagConstraints.NONE,0,0,50,0,0,0);
     }   
 
     public void addLoginButtonEventListener(ActionListener actionListener) {
@@ -54,6 +49,9 @@ public class LoginView extends View{
 
     public String getUserName() {
         return username.getText();
+    }
+    public void showLoginError(String msg){
+        JOptionPane.showMessageDialog(this, msg, "Erro de login", JOptionPane.ERROR_MESSAGE);
     }
 
     public String getUserPassword() {
