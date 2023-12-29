@@ -4,15 +4,22 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author kd
  */
-public class Administrador extends User{
+public class Frota {
     
+    private ArrayList<Veiculo> veiculos = new ArrayList<>();
     
-    public Administrador(String nome, String username, String password){
-        super(nome,username,password);
+    public void adicionarVeiculo(Veiculo veiculo){
         
     }
+    
+    public void removerVeiculo(String codVeiculo){
+        
+    }
+    
 }
