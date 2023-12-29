@@ -25,12 +25,20 @@ public class LoginController {
                 String enteredUsername = loginview.getUserName();
                 String enteredPassword = loginview.getUserPassword();
                 
-                System.out.println("Hello, you clicked on me!");
-                if(autenthicateUser(enteredUsername, enteredPassword))
-                    System.out.println("Login Valido!");
-                else
-                    System.out.println("Login invalido!");
-                }
+                if(enteredUsername.isEmpty() && enteredPassword.isEmpty())
+                    loginView.showLoginError("Nome de usuario vazio e palavra-passe vazios\nPor favor, especifique o nome de usuario");
+                else if(enteredUsername.isEmpty())
+                    loginView.showLoginError("Nome de usuario vazio\nPor favor, especifique o nome de usuario");
+                else if(enteredPassword.isEmpty())
+                    loginView.showLoginError("Palavra-passe vazia\nPor favor, especifique o nome de usuario");
+                else{
+                    if(autenthicateUser(enteredUsername, enteredPassword)){
+                        InicioController.removePanel(0);
+                        InicioController.showPanel(1);
+                    }else
+                        loginView.showLoginError("Login invalido!Nao existe este usuario\nPor favor, verifique as suas credenciais e tente de novo.");
+                    }
+            }
         });
     }
     
