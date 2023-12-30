@@ -17,9 +17,6 @@ public class Login {
     private User user;
     private ArrayList<User> lista = new ArrayList<>();
     
-    public Login(){
-        
-    }
     public boolean validarConta(String username, String password){
         boolean flag = false;
         
