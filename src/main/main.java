@@ -5,6 +5,7 @@
 package main;
 
 import Controlers.InicioController;
+import dataManagement.DataBase;
 import javax.swing.JFrame;
 
 /**
@@ -13,9 +14,9 @@ import javax.swing.JFrame;
  */
 public class main{
     public static void main(String args[]){
+       DataBase.load();
        Inicio frame = new Inicio();
        InicioController frameController= new InicioController(frame);
-       
        
        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        frame.setSize(1000,800);
