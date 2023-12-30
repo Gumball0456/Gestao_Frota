@@ -11,12 +11,17 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import login.Login;
 
 /**
  *
  * @author gumball
  */
 public class LoginView extends View{
+    
+   // private User userData;
+    private Login login = new Login();
+    
     //label and input for username
     JLabel loginError = new JLabel("Hello");
     JLabel usernameL = new JLabel("Usuario");
@@ -45,6 +50,14 @@ public class LoginView extends View{
 
     public void addLoginButtonEventListener(ActionListener actionListener) {
         loginButton.addActionListener(actionListener);
+     
+        String username = this.username.getText();
+        String password = getUserPassword();
+        
+        if(login.validarConta(username,password)){
+            AdminView adminView = new AdminView();
+            adminView.setVisible(true);
+        }
     }
 
     public String getUserName() {
