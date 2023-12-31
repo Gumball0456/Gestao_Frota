@@ -13,9 +13,13 @@ public class Condutor {
     private String codCondutor;
     private String nome;
     private String dataNascimento;
-    private char sexo;
+    private String  sexo;
 
-    public Condutor(String codCondutor, String nome, String dataNascimento, char sexo) {
+    
+    public Condutor(){
+        
+    }
+    public Condutor(String codCondutor, String nome, String dataNascimento, String sexo) {
         this.codCondutor = codCondutor;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -46,13 +50,15 @@ public class Condutor {
         this.dataNascimento = dataNascimento;
     }
 
-    public char getSexo() {
+    public String  getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
     
-    
+    public void adicionarCondutor(Condutor condutor){
+        
+    }
 }

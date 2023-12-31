@@ -1,3 +1,7 @@
+
+import Controlers.CondutorController;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -147,6 +151,14 @@ public class AdicionarCondutor extends javax.swing.JFrame {
         String nome = jTextFieldNome.getText();
         String dataNascimento = jTextFieldDataNascimento.getText();
         String sexo = jTextFieldSexo.getText();
+        boolean success = false;
+        
+        CondutorController condutorController = new CondutorController();
+        success = condutorController.adicionarCondutor(codigo, nome, dataNascimento, sexo);
+        if(success)
+            JOptionPane.showMessageDialog(null,"Condutor adicionado com sucesso!");
+        else
+           JOptionPane.showMessageDialog(null,"ERRO");
     }//GEN-LAST:event_jButtonAdicionarActionPerformed
 
     private void jTextFieldNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeActionPerformed
