@@ -148,6 +148,15 @@ public class AdminView extends View{
         addVehicleButton.setText(text);
         
         addComponent(addVehicleButton,GridBagConstraints.RELATIVE,0,1,1,0,1,GridBagConstraints.SOUTHWEST,GridBagConstraints.NONE,10,10,10,10,0,0);
+        
+        AdicionarCarro carro = new AdicionarCarro();
+        carro.setVisible(true);
+
+        AdicionarMoto moto = new AdicionarMoto();
+        moto.setVisible(true);
+
+        AdicionarBicicleta bicicleta = new AdicionarBicicleta();
+        bicicleta.setVisible(true);
     }
 
     public void addEventListenerAddVehicle(ActionListener actionListener) {

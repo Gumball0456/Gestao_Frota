@@ -54,5 +54,9 @@ public class Carro extends Veiculo{
         
     }
     
+    public void adicionarCarro(Carro carro){
+        
+    }
+    
     
 }
