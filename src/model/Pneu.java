@@ -10,7 +10,9 @@ package model;
  */
 public class Pneu {
     
+    private String codPneu;
     private short tamanho;
+    
     
     public Pneu( short tamanho ){
         
@@ -27,6 +29,18 @@ public class Pneu {
     public short getTamanho(){
         
         return tamanho;
+        
+    }
+    
+    public void setCodPneu(String codPneu){
+        
+        this.codPneu = codPneu;
+        
+    }
+    
+    public String getCodPneu(){
+        
+        return codPneu;
         
     }
 }

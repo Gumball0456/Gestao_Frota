@@ -8,7 +8,7 @@ package model;
  *
  * @author kd
  */
-public class Motorista {
+public class Motorista extends Condutor{
     
     private Veiculo veiculoAssociado;
     private short viagens;

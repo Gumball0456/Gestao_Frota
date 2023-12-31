@@ -5,10 +5,6 @@
 
     import apresentacao.AdminView;
     import dataManagement.DataBase;
-    import entidade.Carro;
-    import entidade.Moto;
-    import entidade.Motorista;
-    import entidade.Veiculo;
     import java.awt.Image;
     import java.awt.event.ActionEvent;
     import java.awt.event.ActionListener;
@@ -19,6 +15,10 @@
     import java.util.ArrayList;
     import javax.swing.Icon;
     import javax.swing.ImageIcon;
+    import model.Carro;
+    import model.Moto;
+    import model.Motorista;
+    import model.Veiculo;
 
     /**
      *
@@ -97,7 +97,7 @@
         public Icon getIconForDriver(Motorista driver){
             Path imagePath;
 
-            if(driver.getSexo() == 'M')
+            if(driver.getSexo().equalsIgnoreCase("M"))
                 imagePath = Paths.get("imagens/man.png");
 
             else
@@ -108,7 +108,7 @@
 
         public void addVehiclesToView(){
             for (Veiculo vehicle : vehicles) {
-                adminView.addVehicle(getIconForVehicle(vehicle),vehicle.getCodVeiuclo(), vehicle.getMarca(), vehicle.getModelo(), vehicle.getCor(), new ActionListener(){
+                adminView.addVehicle(getIconForVehicle(vehicle),vehicle.getCodVeiculo(), vehicle.getMarca(), vehicle.getModelo(), vehicle.getCor(), new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent ae) {
                         vehicles.remove(vehicle);
