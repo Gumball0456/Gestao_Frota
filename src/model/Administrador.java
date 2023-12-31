@@ -15,4 +15,13 @@ public class Administrador extends User{
         super(nome,username,password);
         
     }
+    
+    public Administrador(){
+        this("","","");
+    }
+    
+    public void editarAdmin(Administrador admin){
+        
+        
+    }
 }
