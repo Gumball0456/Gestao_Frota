@@ -13,6 +13,7 @@ public class RotaLogistica {
     
     private String origem;
     private String destino;
+    private ArrayList<Motorista> motoristas = new ArrayList<>();
     private ArrayList<Veiculo> veiculosAssociados = new ArrayList<>();
     
     public RotaLogistica(String origem, String destino){
@@ -43,6 +44,15 @@ public class RotaLogistica {
     public String getDestino(){
         
         return destino;
+        
+    }
+    
+    public void associarVeiculo(Veiculo veiculo, Motorista motorista){
+        
+    }
+    
+    public void desassociarVeiculo(Veiculo veiculo, Motorista motorista){
+        
         
     }
 }

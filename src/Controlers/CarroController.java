@@ -4,6 +4,8 @@
  */
 package Controlers;
 
+import model.Carro;
+
 /**
  *
  * @author kd
@@ -14,8 +16,13 @@ public class CarroController {
         boolean flag = false;
         
         
-        if((codVeiculo.length()>0) &&( cor.length() > 0) && (marca.length() > 0) && (modelo.length() > 0) && (ano.length() > 0) && (localidade.length() > 0))
+        if((codVeiculo.length()>0) &&( cor.length() > 0) && (marca.length() > 0) && (modelo.length() > 0) && (ano.length() > 0) && (localidade.length() > 0)){
+            
+            Carro carro = new Carro();
+            carro.adicionarCarro(carro);
             flag = true;
+        }
+            
             
             return flag;
     }

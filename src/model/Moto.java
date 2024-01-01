@@ -12,22 +12,24 @@ public class Moto extends Veiculo{
     
     private Motor motor;
     private Pneu pneu;
-    private short capacetes;
+    private int capacetes;
     
-    
-    public Moto(Motor motor,Pneu pneu,short capacetes,String cod,String cor,String marca, String modelo, String ano, String localidade,boolean emManutencao){
+    public Moto(){
+        
+    }
+    public Moto(short capacetes,String cod,String cor,String marca, String modelo, String ano, String localidade,boolean emManutencao){
         
         super(cod,cor,marca,modelo,ano,localidade,emManutencao);
         
     }
     
-    public void setCapacetes(short capacetes){
+    public void setCapacetes(int capacetes){
         
         this.capacetes = (capacetes < 0) ? 0 : capacetes ;
         
     }
     
-    public short getCapacetes(){
+    public int getCapacetes(){
         
         return capacetes;
         
@@ -67,5 +69,8 @@ public class Moto extends Veiculo{
         motor.setLigado(true);
     }
 
+    public void adicionarMoto(Moto moto){
+        
+    }
    
 }

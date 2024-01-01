@@ -5,7 +5,6 @@
 package main;
 
 import Controlers.InicioController;
-import dataManagement.DataBase;
 import javax.swing.JFrame;
 import login.Login;
 
@@ -15,7 +14,7 @@ import login.Login;
  */
 public class main{
     public static void main(String args[]){
-       DataBase.load();    
+         
        Login log = new Login();
        log.addUser();
        Inicio frame = new Inicio();

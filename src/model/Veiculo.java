@@ -29,7 +29,7 @@ public abstract class Veiculo {
     }
     
     public Veiculo(){
-        this("","","","","","",false);
+        this("0000","preta","Toyota","corolla","1999","Luanda",false);
     }
 
     public String getCodVeiculo() {

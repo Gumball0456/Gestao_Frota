@@ -10,10 +10,10 @@ package model;
  */
 public class Bicicleta extends Veiculo{
     
-    private short tamanho;
+    private int tamanho;
     private Pneu pneu;
     
-    public Bicicleta(short tamanho, Pneu pneu){
+    public Bicicleta(int tamanho, Pneu pneu){
         
         this.tamanho = tamanho;
         this.pneu = pneu;
@@ -21,16 +21,16 @@ public class Bicicleta extends Veiculo{
     }
     public Bicicleta(){
         
-        super();
+        this(10,null);
     }
     
-    public void setTamanho(short tamanho){
+    public void setTamanho(int tamanho){
         
         this.tamanho = (tamanho < 0) ? 0 : tamanho;
         
     }
     
-    public short getTamanho(){
+    public int getTamanho(){
         
         return tamanho;
         
@@ -54,6 +54,10 @@ public class Bicicleta extends Veiculo{
     
     @Override
     public void desligarMotor(){
+        
+    }
+    
+    public void adicionarBicicleta(Bicicleta bicicleta){
         
     }
 }

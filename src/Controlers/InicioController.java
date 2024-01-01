@@ -20,10 +20,10 @@ public class InicioController {
     public final int GESTOR_DE_FROTA_VIEW = 2;
     
     static LoginView loginView = new LoginView();
-    LoginController loginController = new LoginController(loginView);
+    //LoginController loginController = new LoginController(loginView);
     
     static AdminView adminView = new AdminView();
-    AdminController adminController = new AdminController(adminView);
+   // AdminController adminController = new AdminController(adminView);
     
     static JPanel panels[] = {loginView, adminView};
     
