@@ -12,9 +12,7 @@ import model.Administrador;
  */
 public class AdministradorController {
     
-    public AdministradorController(){
-        
-    }
+    
     
     public boolean editarAdmin(String nome, String username, String password){
         

@@ -75,4 +75,9 @@ public class LoginView extends View{
         
         return password;
     }
+    
+    public void criarUser(){
+       Login log = new Login();
+       log.addUser();
+    }
 }

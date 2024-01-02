@@ -1,6 +1,5 @@
 
-import Controlers.MotoController;
-import javax.swing.JOptionPane;
+import model.Administrador;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -256,22 +255,17 @@ public class AdicionarMoto extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String codigo = jTextFieldCodMoto.getText();
         String cor = jTextFieldCorMoto.getText();
+        String modelo = jTextFieldModeloMoto.getText();
         String marca = jTextFieldMarca.getText();
         String ano = jTextFieldAnoMoto.getText();
         String localidade = jTextFieldLocalidadeMoto.getText();
-        int numPortas = Integer.parseInt(jTextFieldNumPortas.getText());
-        boolean manutencao = false;
+        int capacetes = Integer.parseInt(jTextFieldNumPortas.getText());
+        boolean emManutencao = false;
         if(jCheckBoxSim.isSelected())
-            manutencao = true;
+            emManutencao = true;
         else if(jCheckBoxNao.isSelected())
-            manutencao = false;
-       MotoController motoController = new MotoController();
-         boolean success = motoController.adicionarMoto(codigo, cor, marca, codigo, ano, localidade, numPortas, manutencao);
-         
-         if(success)
-             JOptionPane.showMessageDialog(null, "Moto Adicionada com sucesso");
-         else
-             JOptionPane.showMessageDialog(null, "ERRO!");
+            emManutencao = false;
+        new Administrador().adicionarMoto( codigo, cor,  marca,  modelo, ano,  localidade, capacetes, emManutencao);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

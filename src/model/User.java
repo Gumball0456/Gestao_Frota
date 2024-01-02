@@ -13,6 +13,8 @@ public class User {
     private String nome;
     private String username;
     private String password;
+    private boolean tipoUsuario;
+    
     
     public User(String nome, String username, String passowrd){
         

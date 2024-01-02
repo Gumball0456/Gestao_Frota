@@ -1,3 +1,6 @@
+
+import model.Administrador;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -33,7 +36,7 @@ public class AdicionarBicicleta extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButtonAdicionarBicicleta = new javax.swing.JButton();
         jTextFieldCodBicicleta = new javax.swing.JTextField();
         jTextFieldCorBicicleta = new javax.swing.JTextField();
         jTextFieldMarcaBicicleta = new javax.swing.JTextField();
@@ -72,10 +75,10 @@ public class AdicionarBicicleta extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Em manutenção:");
 
-        jButton1.setText("Adicionar Bicicleta");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAdicionarBicicleta.setText("Adicionar Bicicleta");
+        jButtonAdicionarBicicleta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonAdicionarBicicletaActionPerformed(evt);
             }
         });
 
@@ -149,7 +152,7 @@ public class AdicionarBicicleta extends javax.swing.JFrame {
                         .addComponent(jCheckBoxNao)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(jButtonAdicionarBicicleta)
                         .addGap(0, 390, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -193,7 +196,7 @@ public class AdicionarBicicleta extends javax.swing.JFrame {
                     .addComponent(jCheckBoxSim)
                     .addComponent(jCheckBoxNao))
                 .addGap(32, 32, 32)
-                .addComponent(jButton1)
+                .addComponent(jButtonAdicionarBicicleta)
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
@@ -214,7 +217,7 @@ public class AdicionarBicicleta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonAdicionarBicicletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdicionarBicicletaActionPerformed
        String codigo = jTextFieldCodBicicleta.getText();
        String cor = jTextFieldCorBicicleta.getText();
        String marca = jTextFieldMarcaBicicleta.getText();
@@ -228,11 +231,15 @@ public class AdicionarBicicleta extends javax.swing.JFrame {
        else if(jCheckBoxNao.isSelected())
            emManutencao = false;
        
+       new Administrador().adicionar(codigo, cor, marca, modelo, ano, localidade, tamanho, emManutencao);
+       
+       
+       
        
        
            
        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonAdicionarBicicletaActionPerformed
 
     private void jTextFieldMarcaBicicletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMarcaBicicletaActionPerformed
         // TODO add your handling code here:
@@ -283,7 +290,7 @@ public class AdicionarBicicleta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonAdicionarBicicleta;
     private javax.swing.JCheckBox jCheckBoxNao;
     private javax.swing.JCheckBox jCheckBoxSim;
     private javax.swing.JLabel jLabel1;

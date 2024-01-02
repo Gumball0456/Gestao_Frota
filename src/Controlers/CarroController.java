@@ -12,7 +12,7 @@ import model.Carro;
  */
 public class CarroController {
     
-    public boolean adicionarCarro(String codVeiculo, String cor, String marca, String modelo,String ano, String localidade, boolean emManutencao){
+    public boolean adicionarCarro(String codVeiculo, String cor, String marca, String modelo,String ano, String localidade, boolean emManutencao, int numportas){
         boolean flag = false;
         
         
